@@ -1,0 +1,122 @@
+/* GroundCard.css */
+
+.ground-grid{
+  display: flex;
+}
+.ground-card-list {
+  display: flex; /* Use Flexbox for the card container */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  justify-content: space-between; /* Space between cards */
+  gap: 1rem; /* Space between cards */
+}
+
+.ground-card {
+  max-width: 350px; /* Maximum width of each card */
+  flex: 1 1 calc(33.33% - 1rem); /* 3 cards per row, minus gap */
+  margin: 1rem auto; /* Center the card and give margin */
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffe357, #ffb26b);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ground-card:hover {
+  transform: translateY(-8px);
+}
+
+.ground-card-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.ground-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2b2b52;
+}
+
+.ground-location {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.ground-card-body {
+  margin-top: 1rem;
+}
+
+.ground-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.slots-section {
+  margin-top: 1rem;
+}
+
+.slots-section h4 {
+  font-size: 1.1rem;
+  color: #2b2b52;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.slot {
+  background: #2b2b52;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.ground-card-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.book-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #ff7f50;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #e6703b;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .ground-grid{
+    display: block;
+  }
+  .ground-card {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .ground-grid{
+    display: block;
+  }
+  .ground-card {
+    flex: 1 1 100%; /* 1 card per row on mobile */
+    max-width: 90%; /* Max width for smaller screens */
+  }
+}

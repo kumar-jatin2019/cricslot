@@ -1,0 +1,148 @@
+/* Reset and base styles */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li a, 
+.nav-links ul li button {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.header__profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile__image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.profile__menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #444;
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.profile__menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile__menu ul li a, 
+.profile__menu ul li button {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.profile__menu.open {
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+  }
+
+  .nav-links.open {
+      display: flex;
+  }
+
+  .nav-links ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+  }
+
+  .nav-links ul li {
+      width: 100%;
+      text-align: left;
+  }
+
+  .header__profile {
+      order: 2;
+  }
+
+  .mobile-menu-icon {
+      display: block;
+  }
+
+  .profile__menu {
+      top: 70px;
+      right: 20px;
+  }
+}
+
+/* Smooth transitions */
+.nav-links, .profile__menu {
+  transition: all 0.3s ease;
+}
+
