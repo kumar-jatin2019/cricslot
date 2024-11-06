@@ -18,7 +18,7 @@ const cors = require('cors');
 // Middleware
 app.use(cors(
     {
-        origin: [""],
+        origin: ["https://cricslot.vercel.app/"],
         methods:["POST", "PATCH", "PUT", "DELETE", "GET"],
         credentials: true
     }
