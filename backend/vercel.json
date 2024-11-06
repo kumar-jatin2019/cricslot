@@ -2,11 +2,43 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js", 
+      "src": "index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "routes/auth.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/api/auth/register",
+      "dest": "/routes/auth.js"
+    },
+    {
+      "src": "/api/auth/login",
+      "dest": "/routes/auth.js"
+    },
+    {
+      "src": "/api/auth/createGrounds",
+      "dest": "/routes/auth.js"
+    },
+    {
+      "src": "/api/auth/myGrounds",
+      "dest": "/routes/auth.js"
+    },
+    {
+      "src": "/api/auth/grounds",
+      "dest": "/routes/auth.js"
+    },
+    {
+      "src": "/api/auth/bookSlot",
+      "dest": "/routes/auth.js"
+    },
+    {
+      "src": "/api/auth/grounds/:id",
+      "dest": "/routes/auth.js"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.js"
