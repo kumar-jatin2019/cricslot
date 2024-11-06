@@ -21,8 +21,9 @@
     "nodemon": "^3.1.7"
   },
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+   "dev": "next dev",
+    "start": "next start",
+    "lint": "next lint"
   },
   "name": "cricbook",
   "version": "1.0.0",
