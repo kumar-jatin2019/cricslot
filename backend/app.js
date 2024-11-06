@@ -16,7 +16,13 @@ const cors = require('cors');
 
 // Routes
 // Middleware
-app.use(cors()); // Enable CORS for all requests
+app.use(cors(
+    {
+        origin: ["https://cricslot-i55o.vercel.app"],
+        methods:["POST", "PATCH", "PUT", "DELETE", "GET"],
+        credentials: true
+    }
+)); // Enable CORS for all requests
 app.use(express.json()); // Parse incoming JSON requests
 app.use('/api/auth', authRoutes); // Authentication routes
 
