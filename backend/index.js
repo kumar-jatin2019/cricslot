@@ -17,7 +17,7 @@ const cors = require('cors');
 // Routes
 // Middleware
 app.use(cors({
-    origin: ["https://cricslot.vercel.app/api/", "http://localhost:3000"], // Allow both production and local origins
+    origin: ["https://cricslot.vercel.app/api/", "http://localhost:2000"], // Allow both production and local origins
     methods: ["POST", "PATCH", "PUT", "DELETE", "GET"],
     credentials: true
 })); // Enable CORS for all requests
@@ -28,7 +28,7 @@ app.use('/api/auth', authRoutes); // Authentication routes
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Serverrrr is running on http://localhost:${PORT}`);
-});
+// // Start the server
+// app.listen(PORT, () => {
+//     console.log(`Serverrrr is running on http://localhost:${PORT}`);
+// });
