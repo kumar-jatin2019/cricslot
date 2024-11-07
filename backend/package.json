@@ -15,14 +15,15 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
+    "serverless-http": "^3.2.0",
     "url": "^0.11.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
   },
   "scripts": {
-   "dev": "next dev",
-    "start": "next start",
+    "dev": "next dev",
+    "start": "node index.js" , 
     "lint": "next lint"
   },
   "name": "cricbook",
