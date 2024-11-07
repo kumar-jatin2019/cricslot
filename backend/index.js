@@ -79,3 +79,9 @@ connect().catch(err => {
     console.error('Error in serverless function:', err);
 });
 
+// / /Start the server (bind to process.env.PORT, which is required by Render)
+const PORT = process.env.PORT || 3000;  // Ensure you're using the provided port or default to 3000
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
