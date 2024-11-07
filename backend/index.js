@@ -56,7 +56,7 @@ async function connect() {
 }
 
 app.use(cors({
-    origin: ["https://cricslot-slot.vercel.app", "http://localhost:58219"], // Allow both production and local origins
+    origin: ["", "http://localhost:58219"], // Allow both production and local origins
     methods: ["POST", "PATCH", "PUT", "DELETE"],
     credentials: true
 })); // Enable CORS for all requests

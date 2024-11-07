@@ -1,6 +1,6 @@
 import axios from 'axios';
 const axiosInstance = axios.create({
-  baseURL: 'https://cricslot-back.vercel.app/api', // Set your API base URL
+  baseURL: 'https://cricslot-api.onrender.com/api', // Set your API base URL
 });
 
 // Intercept requests to add the Bearer token
