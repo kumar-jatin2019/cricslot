@@ -62,7 +62,7 @@ app.use(cors({
 })); // Enable CORS for all requests
 
 
-console.log(app, "app")
+console.log(app, "app");
 app.use(express.json()); // Parse incoming JSON requests
 app.use('/api/auth', authRoutes); // Authentication routes
 
