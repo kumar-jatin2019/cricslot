@@ -56,7 +56,10 @@ async function connect() {
 }
 
 app.use(cors({
-    origin: ["", "http://localhost:58219"], // Allow both production and local origins
+    origin: [
+        'https://cric-slot.onrender.com',  // Frontend URL
+        'http://localhost:3000'            // Localhost (for local development)
+    ], // Allow both production and local origins
     methods: ["POST", "PATCH", "PUT", "DELETE"],
     credentials: true
 })); // Enable CORS for all requests
