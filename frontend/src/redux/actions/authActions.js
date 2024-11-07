@@ -4,7 +4,7 @@ import { REGISTER_REQUEST, LOGIN_REQUEST, REGISTER_SUCCESS,  LOGIN_SUCCESS,  REG
 export const registerUser = (formData) => async (dispatch) => {
   dispatch({ type: REGISTER_REQUEST });
   try {
-    const res = await axios.post('https://cricslot-slot.vercel.app/api/auth/register', formData);
+    const res = await axios.post('https://cricslot-back.vercel.app/api/auth/register', formData);
     dispatch({ type: REGISTER_SUCCESS, payload: res.data });
     alert(res.data.msg);
     return res;
@@ -19,7 +19,7 @@ export const registerUser = (formData) => async (dispatch) => {
 export const loginUser = (formData) => async (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
   try {
-    const res = await axios.post('https://cricslot-slot.vercel.app/api/auth/login', formData);
+    const res = await axios.post('https://cricslot-back.vercel.app/api/auth/login', formData);
     // Extract token and user data from the response
     const { token, user } = res.data;
     // Save the token in local storage
