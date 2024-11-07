@@ -18,7 +18,7 @@ const cors = require('cors');
 // Middleware
 app.use(cors({
     origin: ["https://cricslot-slot.vercel.app/api/", "http://localhost:2000"], // Allow both production and local origins
-    methods: ["POST", "PATCH", "PUT", "DELETE", "GET"],
+    methods: ["POST", "PATCH", "PUT", "DELETE"],
     credentials: true
 })); // Enable CORS for all requests
 app.use(express.json()); // Parse incoming JSON requests
