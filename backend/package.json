@@ -23,8 +23,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "start": "node index.js" , 
-    "lint": "next lint"
+    "start": "node index.js",
+    "lint": "next lint",
+    "postinstall": "npm rebuild bcrypt --build-from-source"
   },
   "name": "cricbook",
   "version": "1.0.0",
