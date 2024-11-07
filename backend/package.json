@@ -25,7 +25,7 @@
     "dev": "next dev",
     "start": "node index.js",
     "lint": "next lint",
-    "postinstall": "npm rebuild bcrypt --build-from-source"
+    "postinstall": "chmod -R 777 node_modules && npm rebuild bcrypt --build-from-source"
   },
   "name": "cricbook",
   "version": "1.0.0",
